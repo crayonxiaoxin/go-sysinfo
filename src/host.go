@@ -52,7 +52,7 @@ func HostInfo() {
 			cpu := infoStats[i]
 			index := ""
 			if count > 1 {
-				index = strconv.FormatInt(int64(cpu.CPU), 10) + " "
+				index = " - " + strconv.FormatInt(int64(cpu.CPU), 10)
 			}
 			table.AppendBulk([][]string{
 				{"Cores" + index, strconv.FormatInt(int64(cpu.Cores), 10)},
